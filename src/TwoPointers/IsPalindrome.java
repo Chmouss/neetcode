@@ -7,8 +7,6 @@ public class IsPalindrome {
     public static void main(String[] args) {
 
         String s = "0P";
-
-
         System.out.println(isPalindrome(s));
 
     }
