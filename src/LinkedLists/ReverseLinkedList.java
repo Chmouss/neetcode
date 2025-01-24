@@ -20,11 +20,18 @@ public class ReverseLinkedList {
 
     public static ListNode reverseList(ListNode head) {
 
-        while(head.next != null){
+        //iteratively with 2 pointers (current element and previous element)
+        ListNode current = head;
+        ListNode prev = null;
 
+        while(current != null){
+            ListNode temp = current.next;
+            current.next = prev; //prev is always null
+            prev = current;
+            current = temp;
         }
 
-        return null;
+        return prev;
     }
 
 
