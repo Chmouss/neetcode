@@ -14,11 +14,11 @@ public class ValidParentheses {
     public static boolean isValid(String s) {
 
         Stack<Character> stack = new Stack<>();
-        s = s.replaceAll("[^({\\[]}\\)]", "");
+        s = s.replaceAll("[^({\\[]}\\)]", ""); //not necessary but a bit cleaner imo
         char [] tab = s.toCharArray();
 
         for (char c: tab){
-            if(!stack.isEmpty()) {
+            if(!stack.isEmpty()) { //can be upgraded with a switch case for readability
                 char charToMatch = stack.peek();
                 if (c == ')' && charToMatch == '(') {
                     stack.pop();
